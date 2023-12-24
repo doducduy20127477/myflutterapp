@@ -75,22 +75,49 @@ class Home extends StatelessWidget {
       //   color: Colors.grey[400],
       //   child: Text('Hello'),
       // ),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.start,
+      // body: Row(
+      //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      //   crossAxisAlignment: CrossAxisAlignment.start,
+      //   children: [
+      //     Text('hello, world'),
+      //     TextButton(
+      //       onPressed: () {  },
+      //       style: ButtonStyle(
+      //        backgroundColor: MaterialStateProperty.all<Color>(Colors.amber)
+      //       ),
+      //       child: Text('click me'),
+      //     ),
+      //     Container(
+      //       color: Colors.cyan,
+      //       padding: EdgeInsets.all(30.0),
+      //       child: Text('inside container'),
+      //     )
+      //   ],
+      // ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text('hello, world'),
-          TextButton(
-            onPressed: () {  },
-            style: ButtonStyle(
-             backgroundColor: MaterialStateProperty.all<Color>(Colors.amber)
-            ),
-            child: Text('click me'),
+          Row(
+            children: [
+              Text('hello, '),
+              Text('world')
+            ],
           ),
           Container(
+            padding: EdgeInsets.all(20.0),
             color: Colors.cyan,
+            child: Text('one'),
+          ),
+          Container(
             padding: EdgeInsets.all(30.0),
-            child: Text('inside container'),
+            color: Colors.pinkAccent,
+            child: Text('two'),
+          ),
+          Container(
+            padding: EdgeInsets.all(40.0),
+            color: Colors.amber,
+            child: Text('three'),
           )
         ],
       ),
