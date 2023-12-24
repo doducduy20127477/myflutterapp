@@ -68,12 +68,31 @@ class Home extends StatelessWidget {
       //   //   color: Colors.amber,
       //   // ),
       // ),
-      body: Container(
-        // padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0),
-        padding: EdgeInsets.fromLTRB(10.0, 20.0, 30.0, 40.0),
-        margin: EdgeInsets.all(30.0),
-        color: Colors.grey[400],
-        child: Text('Hello'),
+      // body: Container(
+      //   // padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0),
+      //   padding: EdgeInsets.fromLTRB(10.0, 20.0, 30.0, 40.0),
+      //   margin: EdgeInsets.all(30.0),
+      //   color: Colors.grey[400],
+      //   child: Text('Hello'),
+      // ),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text('hello, world'),
+          TextButton(
+            onPressed: () {  },
+            style: ButtonStyle(
+             backgroundColor: MaterialStateProperty.all<Color>(Colors.amber)
+            ),
+            child: Text('click me'),
+          ),
+          Container(
+            color: Colors.cyan,
+            padding: EdgeInsets.all(30.0),
+            child: Text('inside container'),
+          )
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {  },
