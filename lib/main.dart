@@ -17,6 +17,7 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red[600],
       ),
+
       // body: Center(
       //   // child: Text(
       //   //   'hello ninjas!',
@@ -94,31 +95,63 @@ class Home extends StatelessWidget {
       //     )
       //   ],
       // ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
-        crossAxisAlignment: CrossAxisAlignment.center,
+      // body: Column(
+      //   mainAxisAlignment: MainAxisAlignment.end,
+      //   crossAxisAlignment: CrossAxisAlignment.center,
+      //   children: [
+      //     Row(
+      //       children: [
+      //         Text('hello, '),
+      //         Text('world')
+      //       ],
+      //     ),
+      //     Container(
+      //       padding: EdgeInsets.all(20.0),
+      //       color: Colors.cyan,
+      //       child: Text('one'),
+      //     ),
+      //     Container(
+      //       padding: EdgeInsets.all(30.0),
+      //       color: Colors.pinkAccent,
+      //       child: Text('two'),
+      //     ),
+      //     Container(
+      //       padding: EdgeInsets.all(40.0),
+      //       color: Colors.amber,
+      //       child: Text('three'),
+      //     )
+      //   ],
+      // ),
+      body: Row(
         children: [
-          Row(
-            children: [
-              Text('hello, '),
-              Text('world')
-            ],
+          Expanded(
+              child: Image.asset('assets/space-2.jpg'),
+            flex: 3,
           ),
-          Container(
-            padding: EdgeInsets.all(20.0),
-            color: Colors.cyan,
-            child: Text('one'),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.cyan,
+              child: Text('1'),
+            ),
           ),
-          Container(
-            padding: EdgeInsets.all(30.0),
-            color: Colors.pinkAccent,
-            child: Text('two'),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.pinkAccent,
+              child: Text('2'),
+            ),
           ),
-          Container(
-            padding: EdgeInsets.all(40.0),
-            color: Colors.amber,
-            child: Text('three'),
-          )
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.amber,
+              child: Text('3'),
+            ),
+          ),
         ],
       ),
       floatingActionButton: FloatingActionButton(
